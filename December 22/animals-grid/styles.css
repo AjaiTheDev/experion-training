@@ -15,7 +15,6 @@ body{
 .grid {
     width: 100%;
     height: 100%;
-    /* background-color: green; */
     margin-right: auto;
     display: flex;
     flex-direction: column;
@@ -41,13 +40,4 @@ body{
     font-size: 2.3rem;
     font-style: normal;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-.aside{
-    width: 30%;
-    height: 100%;
-    background-color: orange;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
 }
