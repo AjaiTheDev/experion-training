@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="content">
+        </tbody>
+    </table>
+
+
+    <script>
+
+        function deleteRow(event) {
+
+
+            let userName = event.target.parentElement.parentElement;
+        
+
+            let test = userName.children[0].innerText;
+
+            let res = confirm('do you want to delete ' +test+ '?');
+
+            if(res == true){
+                event.target.parentElement.parentElement.style.display = 'none';
+                
+            }         
+        }
+
+    const users = [
+        {
+            name: 'Lex Luthor',
+            email: 'lexluthor@gmail.com',
+        },
+        {
+            name: 'Bruce Wayne',
+            email: 'manuluthor@gmail.com',
+        },
+        {
+            name: 'Clark Kent',
+            email: 'manuluthor@gmail.com',
+        }
+    ];
+
+    const element = document.getElementById('content');
+
+    users.forEach(user => {
+
+        const row = `<tr>
+                        <td>${user.name}</td>
+                        <td>${user.email}</td>
+                        <td>
+                            <button onclick="deleteRow(event)">delete</button>
+                        </td>
+                    </tr>`;
+        element.innerHTML += row;
+    })
+    </script>
+</body>
+</html>
