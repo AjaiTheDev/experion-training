@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            width: 300px;
+            height: 50px;
+            text-align: center;
+        }
+        span{
+            font-size: larger;
+            font-weight: bolder;
+            
+        }
+    </style>
+</head>
+<body>
+    <form onsubmit="handleSubmit(event)" >
+        <input type="text" id="fnames" name="fname" placeholder="enter your name">
+        <button type="submit">submit</button>
+    </form>
+    <!-- unsorted list -->
+    <span>Un sorted List</span>
+    <ol id="ordered-list">     
+    </ol>
+    <!-- sorted-list -->
+    <span>sorted list</span>
+    <button onclick="sortIt()">sort</button>
+    <ol id="sorted-list">
+    </ol>
+    <!-- reverse list -->
+    <span>reverse order</span>
+    <button onclick="sortItRev()">rev sort</button>
+    <ol id="rev-sorted-list">
+    </ol>
+    <!-- user name length -->
+    <span>length of each user name</span>
+    <button onclick="lengthElements()">length</button>
+    <ol id="element-length">
+    </ol>
+
+    <!-- duplicate entry -->
+    <span>duplicate entries</span>
+    <button onclick="dupElements()">length</button>
+    <ol id="duplicate-entries">
+    </ol>
+    <!-- <script src="../activity 1/array.js"></script> -->
+    <script src="../activity 1/array-forloop.js"></script>
+</body>
+</html>

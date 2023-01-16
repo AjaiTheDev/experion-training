@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form onsubmit="onSubmitHandler(event)">
+        <input type="number"  step="0.01" name="fare" id="fare" placeholder="enter the fare">
+        <button type="submit">submit</button>
+    </form>
+        <!-- unsorted list -->
+        <span>Un sorted List</span>
+        <ol id="ordered-list">     
+        </ol>
+        <!-- sorted-list -->
+        <span>sorted list</span>
+        <button onclick="sortIt()">sort</button>
+        <ol id="sorted-list">
+        </ol>
+        <!-- reverse list -->
+        <span>reverse order</span>
+        <button onclick="sortItRev()">rev sort</button>
+        <ol id="rev-sorted-list">
+        </ol>
+        <!-- search element -->
+        <span>search element</span>
+        <input type="search" name="search" id="search">
+        <button onclick="search()">search</button>
+        <div id="search-result"></div>
+        <!-- min value -->
+        <div id="min-val-div">
+            <span>minimum value</span>
+            <button onclick="minFare()">minimum fare</button>
+        </div>
+        <div id="max-val-div">
+            <span>maximum value</span>
+            <button onclick="maxFare()">minimum fare</button>
+        </div>
+
+        <script src="../Activity 3/script.js"></script>
+</body>
+</html>

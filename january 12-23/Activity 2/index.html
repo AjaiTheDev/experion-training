@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            font-size: 1.5rem;
+            font-weight: bold;
+
+        }
+    </style>
+</head>
+
+<body>
+    <form onsubmit="fareHandler(event)">
+        <label for="fare">fare</label>
+        <input type="number" name="fare" id="fare">
+        <label for="">Time</label>
+        <input type="time" name="time" id="time">
+        <button type="submit">click here</button>
+
+
+        <div id="discount-price">
+            <span>discount price</span><br>
+        </div>
+
+
+    </form>
+
+    <script>
+
+        function fareHandler(event) {
+
+            event.preventDefault();
+
+            let fare = parseInt(document.getElementById('fare').value);
+            const time = document.getElementById('time').value;
+            const discountDiv = document.getElementById('discount-price');
+            let discountFare = 0;
+            const inpTime = parseInt(time);
+            // let todayTime = new Date();
+            // todayTime = parseInt(todayTime.getHours() + "" + ("0" + todayTime.getMinutes()).substr(-2) + "" + ("0" + todayTime.getSeconds()).substr(-2));
+            // todayTime = todayTime.getHours();
+
+            if (inpTime >= 6 & inpTime <= 9) {
+
+                discountFare = fare * (10 / 100);
+                fare = fare + discountFare;
+                discountDiv.innerHTML = `<span>${fare}Rs</span>`;
+
+            }
+            else if (inpTime > 9 & inpTime <= 17) {
+
+                discountFare = fare * (20 / 100);
+                fare = fare + discountFare;
+                console.log(fare);
+                discountDiv.innerHTML = `<span>${fare}Rs</span>`;
+
+            } else if (inpTime > 17 & inpTime <= 23) {
+
+                discountFare = fare * (7 / 100);
+                fare = fare + discountFare;
+                discountDiv.innerHTML = `<span>${fare}Rs</span>`;
+
+            } else {
+
+                discountFare = fare * (5 / 100);
+                fare = fare + discountFare;
+                discountDiv.innerHTML = `<span>${fare}Rs</span>`;
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
